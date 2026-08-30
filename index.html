@@ -187,7 +187,7 @@ footer .brand{justify-content:center;font-size:1rem;margin-bottom:.4rem;color:va
     </div>
   </div>
   <div class="marquee rv d2" aria-hidden="true">
-    <span>Yaprak Sarma <i>✦</i> Çıtır Börek <i>✦</i> Mercimek Köftesi <i>✦</i> San Sebastian <i>✦</i> Revani <i>✦</i> Poğaça <i>✦</i> İçli Köfte <i>✦</i> Profiterol <i>✦</i> Yaprak Sarma <i>✦</i> Çıtır Börek <i>✦</i> Mercimek Köftesi <i>✦</i> San Sebastian <i>✦</i> Revani <i>✦</i> Poğaça <i>✦</i> İçli Köfte <i>✦</i> Profiterol <i>✦</i> </span>
+    <span>Yaprak Sarma <i>✦</i> Çıtır Börek <i>✦</i> Mini Burger <i>✦</i> San Sebastian <i>✦</i> Magnolia <i>✦</i> Kanepeler <i>✦</i> İçli Köfte <i>✦</i> Konserveler <i>✦</i> Yaprak Sarma <i>✦</i> Çıtır Börek <i>✦</i> Mini Burger <i>✦</i> San Sebastian <i>✦</i> Magnolia <i>✦</i> Kanepeler <i>✦</i> İçli Köfte <i>✦</i> Konserveler <i>✦</i> </span>
   </div>
 </section>
 
@@ -292,6 +292,8 @@ footer .brand{justify-content:center;font-size:1rem;margin-bottom:.4rem;color:va
 const MENU = [
   { id:"tuzlu", name:"Tuzlular", sub:"Mezeler & Salatalar", items:[
     { n:"Yaprak Sarma", u:"kg", p:700, d:"İncecik sarılmış, taptaze el yapımı" },
+    { n:"Kuru Dolma", u:"", p:800 },
+    { n:"Girit Ezmesi", u:"", p:750 },
     { n:"Mercimek Köftesi / Topları", u:"", p:450 },
     { n:"Kısır", u:"", p:450 },
     { n:"Kinoalı Kısır", u:"", p:600, d:"Glutensiz" },
@@ -304,8 +306,17 @@ const MENU = [
     { n:"Yoğurtlu Semizotu", u:"", p:450 },
     { n:"İçli Köfte", u:"adet", p:75, d:"Minimum 10 adet" },
   ]},
+  { id:"kanepe", name:"Kanepe & Mini", sub:"Davetlik atıştırmalıklar", items:[
+    { n:"Mini Burger", u:"adet", p:90 },
+    { n:"Mini Wrap", u:"adet", p:100, d:"Tavuklu veya ton balıklı" },
+    { n:"Somon Füme & Krem Peynirli Kanepe", u:"adet", p:60 },
+    { n:"Avokado & Hindi Füme & Labneli Kanepe", u:"adet", p:60 },
+    { n:"Pesto Soslu & Domates & Peynirli Kanepe", u:"adet", p:35 },
+    { n:"Kaşar & Salam & Zeytin Ezmeli Kanepe", u:"adet", p:35 },
+  ]},
   { id:"hamur", name:"Börek & Hamur İşi", sub:"Fırından", items:[
-    { n:"Çıtır Börek", u:"kg", p:850 },
+    { n:"Çıtır Börek", u:"kg", p:850, d:"Ispanaklı · Peynirli · Patatesli — Kıymalı +150 ₺" },
+    { n:"Muska Böreği", u:"adet", p:70, d:"Minimum 10 adet" },
     { n:"Poğaça Çeşitleri", u:"adet", p:35, d:"Sakallı · Peynirli · Sade · Haşhaşlı · Zeytinli" },
   ]},
   { id:"kek", name:"Kekler", sub:"Ev usulü", items:[
@@ -313,15 +324,26 @@ const MENU = [
     { n:"Sade / Kakaolu / Mozaik Kek", u:"", p:500 },
     { n:"Limonlu / Havuçlu Kek", u:"", p:550 },
     { n:"Orman Meyveli Crumble Kek", u:"", p:800 },
-    { n:"San Sebastian", u:"", p:1000, d:"8–10 dilim" },
+    { n:"Prenses Kek", u:"", p:800 },
+    { n:"Brownie", u:"", p:900 },
+    { n:"San Sebastian", u:"", p:1100, d:"8–10 dilim" },
     { n:"Muffin", u:"adet", p:50 },
     { n:"Kremalı Cupcake", u:"adet", p:75 },
   ]},
   { id:"tatli", name:"Tatlılar", sub:"Şerbetli & Sütlü", items:[
     { n:"Revani", u:"", p:600 },
-    { n:"Şekerpare", u:"", p:550 },
+    { n:"Şekerpare", u:"", p:600 },
+    { n:"Triliçe", u:"", p:1000 },
     { n:"Profiterol", u:"", p:800 },
+    { n:"Mini Cheesecake", u:"adet", p:70, d:"Frambuazlı veya limonlu" },
+    { n:"Porsiyonluk Tart", u:"adet", p:150 },
     { n:"Tartolet", u:"adet", p:30 },
+  ]},
+  { id:"cup", name:"Cup Tatlıları", sub:"Minimum 8 adet", items:[
+    { n:"Magnolia", u:"adet", p:90 },
+    { n:"Spoonful", u:"adet", p:90 },
+    { n:"Tiramisu", u:"adet", p:90 },
+    { n:"Dubai Tatlısı", u:"adet", p:150 },
   ]},
   { id:"kurabiye", name:"Kurabiyeler", sub:"Çay saati", items:[
     { n:"Elmalı Kurabiye", u:"kg", p:750 },
@@ -329,6 +351,17 @@ const MENU = [
     { n:"Un Kurabiyesi", u:"", p:600 },
     { n:"Mantar Kurabiye", u:"", p:600 },
     { n:"Starbucks Kurabiye", u:"", p:900 },
+  ]},
+  { id:"sekersiz", name:"Şeker İlavesiz", sub:"Daha hafif seçenekler", items:[
+    { n:"Hurma Topu", u:"adet", p:45, d:"Şeker ilavesiz çikolata kaplamalı" },
+    { n:"Yulaflı Kurabiye", u:"adet", p:45 },
+    { n:"Dereotlu Poğaça", u:"adet", p:40 },
+  ]},
+  { id:"konserve", name:"Konserve", sub:"Kış hazırlıkları", items:[
+    { n:"Domates Konservesi", u:"660 cc", p:100 },
+    { n:"Domates Konservesi", u:"1000 cc", p:135 },
+    { n:"Menemenlik Konserve", u:"660 cc", p:145 },
+    { n:"Menemenlik Konserve", u:"1000 cc", p:170 },
   ]},
 ];
 
