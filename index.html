@@ -123,6 +123,23 @@ h1 em{font-style:italic;color:var(--gold)}
 .empty.show{display:block}
 .note{margin-top:1rem;font-size:.8rem;color:var(--muted);text-align:center;font-style:italic}
 
+/* ---------- seasonal offers ---------- */
+.offers{padding:0 0 1rem;scroll-margin-top:72px}
+.offer{border:1px solid rgba(184,146,90,.4);border-radius:24px;padding:clamp(1.25rem,5vw,2rem);background:var(--paper);margin-bottom:1rem}
+.offer h3{font-family:var(--serif);font-size:clamp(1.8rem,6vw,2.4rem);font-weight:500;line-height:1.1;margin-bottom:.65rem}
+.offer p{font-size:.9rem;color:var(--ink-2)}
+.offer .offer-price{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap;margin:1rem 0}
+.offer-price strong{font-family:var(--serif);font-size:2.8rem;font-weight:600;line-height:1}
+.offer-price del{font-size:1rem;color:var(--ink-2)}
+.offer-label{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+.offer ul{padding-left:1.2rem;margin:.5rem 0 1rem;color:var(--ink-2);font-size:.9rem;line-height:1.8}
+.offer h4{font-family:var(--serif);font-size:1.3rem;font-weight:600;margin-top:1rem}
+.offer .btn{width:100%;margin-top:.7rem;letter-spacing:.06em;text-align:center;min-height:48px}
+.offer-feast{background:linear-gradient(135deg,#fbf5e8,#f2e4cc);border-color:#c9a77b}
+.offer-feast h3,.offer-feast .offer-price strong{color:#7b2933}
+.offer-manti{border-style:dashed}
+@media(min-width:640px){.offer .btn{width:auto}}
+
 /* ---------- steps ---------- */
 .steps{padding:.5rem 0 2rem}
 .steps-track{display:flex;gap:.75rem;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 1.25rem 1rem;margin:0 -1.25rem}
@@ -166,7 +183,7 @@ footer .brand{justify-content:center;font-size:1rem;margin-bottom:.4rem;color:va
     </a>
     <nav>
       <a href="#fiyat">Fiyat Listesi</a>
-      <a href="#surec">Süreç</a>
+      <a href="#kampanyalar">Kampanyalar</a>
       <a href="#iletisim">İletişim</a>
     </nav>
   </div>
@@ -182,7 +199,7 @@ footer .brand{justify-content:center;font-size:1rem;margin-bottom:.4rem;color:va
       <p class="tag">Ev yapımı, taze, doğal lezzetler — kapınıza kadar.</p>
       <div class="cta-row">
         <a class="btn btn-gold" href="#fiyat">Fiyat Listesi</a>
-        <a class="btn btn-line" href="#surec">Nasıl Sipariş Verilir?</a>
+        <a class="btn btn-line" href="#kampanyalar">Kampanyalar</a>
       </div>
     </div>
   </div>
@@ -208,6 +225,44 @@ footer .brand{justify-content:center;font-size:1rem;margin-bottom:.4rem;color:va
       <b style="font-size:1rem;margin-top:.3rem">Minimum sipariş</b>
       <p>Kapora sonrası hazırlık başlar.</p>
     </div>
+  </div>
+</section>
+
+<section id="kampanyalar" class="offers" aria-labelledby="offers-title">
+  <div class="wrap sec-h rv">
+    <div class="eyebrow">Birlikte kurulan sofralar</div>
+    <h2 id="offers-title">Menüler & Özel Lezzetler</h2>
+    <p>Kalabalık sofralara ve evdeki güzel anlara.</p>
+    <div class="orn" aria-hidden="true">✦</div>
+  </div>
+  <div class="wrap">
+    <article class="offer offer-feast rv">
+      <div class="offer-label">10 kişilik · Kampanyalı menü</div>
+      <h3>Kalabalık sofralar, ev yapımı lezzetler</h3>
+      <div class="offer-price"><del aria-label="Önceki fiyat 3600 TL">3.600 ₺</del><strong>3.000 ₺</strong></div>
+      <h4>Sabit menü</h4>
+      <ul>
+        <li>1,5 kg Yaprak Sarma</li>
+        <li>1 kg Mercimek Topları</li>
+        <li>1 kg Çıtır Börek</li>
+        <li>1 kg Rus Makarnası</li>
+      </ul>
+      <h4>Bir tatlı seçeneği dahil</h4>
+      <p>Aşağıdaki seçeneklerden birini seçebilirsiniz:</p>
+      <ul>
+        <li>Kurabiye: Elmalı, çörekotlu minik veya mantar kurabiyesi</li>
+        <li>Kek: Islak, limonlu, sade veya mozaik kek</li>
+        <li>Cup tatlısı: 10 adet</li>
+      </ul>
+      <a class="btn btn-gold" href="https://wa.me/905442374072?text=Merhaba%2C%203.000%20TL%20olan%2010%20ki%C5%9Filik%20kampanyal%C4%B1%20men%C3%BC%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Menü için WhatsApp'tan yazın</a>
+    </article>
+    <article class="offer offer-manti rv">
+      <div class="offer-label">Kayseri usulü · El yapımı · Dondurulmuş</div>
+      <h3>Kayserili annemin elinden mantı</h3>
+      <p>El emeğiyle özenle hazırlanan, dondurulmuş Kayseri mantısı.</p>
+      <div class="offer-price"><strong>750 ₺</strong><span>/ kg</span></div>
+      <a class="btn btn-gold" href="https://wa.me/905442374072?text=Merhaba%2C%20kilosu%20750%20TL%20olan%20dondurulmu%C5%9F%20Kayseri%20mant%C4%B1s%C4%B1%20i%C3%A7in%20sipari%C5%9F%20bilgisi%20almak%20istiyorum." target="_blank" rel="noopener">Mantı için WhatsApp'tan yazın</a>
+    </article>
   </div>
 </section>
 
@@ -262,7 +317,7 @@ footer .brand{justify-content:center;font-size:1rem;margin-bottom:.4rem;color:va
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.1 5 5 0 0 0 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg>
           WhatsApp'tan Sipariş Ver
         </a>
-        <a class="btn btn-line" href="https://instagram.com/hanimeller_beylikduzu" target="_blank" rel="noopener">@hanimeller_beylikduzu</a>
+        <a class="btn btn-line" href="https://instagram.com/hanimeller_istanbul" target="_blank" rel="noopener">@hanimeller_istanbul</a>
       </div>
       <div class="areas"><span>Beylikdüzü</span><span>Esenyurt</span><span>Büyükçekmece</span><span>Başakşehir</span><span>Avcılar</span></div>
     </div>
@@ -315,6 +370,7 @@ const MENU = [
     { n:"Kaşar & Salam & Zeytin Ezmeli Kanepe", u:"adet", p:35 },
   ]},
   { id:"hamur", name:"Börek & Hamur İşi", sub:"Fırından", items:[
+    { n:"Kayseri Mantısı", u:"kg", p:750, d:"El yapımı · Dondurulmuş" },
     { n:"Çıtır Börek", u:"kg", p:850, d:"Ispanaklı · Peynirli · Patatesli — Kıymalı +150 ₺" },
     { n:"Muska Böreği", u:"adet", p:70, d:"Minimum 10 adet" },
     { n:"Poğaça Çeşitleri", u:"adet", p:35, d:"Sakallı · Peynirli · Sade · Haşhaşlı · Zeytinli" },
