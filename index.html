@@ -137,6 +137,21 @@ h1 em{font-style:italic;color:var(--gold)}
 .offer .btn{width:100%;margin-top:.7rem;letter-spacing:.06em;text-align:center;min-height:48px}
 .offer-feast{background:linear-gradient(135deg,#fbf5e8,#f2e4cc);border-color:#c9a77b}
 .offer-feast h3,.offer-feast .offer-price strong{color:#7b2933}
+.offer-kids{position:relative;overflow:hidden;background:linear-gradient(160deg,#fcf3f0,#f4dfd8);border-color:#d6a49c}
+.offer-kids::after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:radial-gradient(closest-side,rgba(181,82,90,.12),transparent);left:-80px;bottom:-90px;pointer-events:none}
+.offer-kids .offer-label,.offer-kids h3,.offer-kids>p{padding-right:88px}
+.offer-kids .offer-label{color:#a8434c}
+.offer-kids h3,.offer-kids .offer-price strong{color:#9c3a44}
+.offer-badge{position:absolute;top:1rem;right:1rem;width:78px;height:78px;border-radius:50%;background:#b5525a;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(8deg);box-shadow:0 10px 20px -10px rgba(156,58,68,.7);line-height:1;text-align:center}
+.offer-badge b{font-family:var(--serif);font-size:1.9rem;font-weight:600}
+.offer-badge span{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;margin-top:.15rem}
+.offer-save{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;background:#b5525a;color:#fff;padding:.3rem .6rem;border-radius:999px;align-self:center}
+.offer-note{display:block;font-size:.75rem;color:var(--muted);margin:-.6rem 0 .4rem}
+.offer ul em{font-style:normal;color:var(--muted)}
+.offer-feats{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin:.4rem 0 .8rem}
+.offer-feats span{display:flex;align-items:center;gap:.45rem;font-size:.78rem;color:var(--ink-2);background:rgba(255,255,255,.6);border:1px solid rgba(181,82,90,.2);border-radius:12px;padding:.55rem .6rem;line-height:1.25}
+.offer-feats svg{flex:0 0 18px;width:18px;height:18px;color:#b5525a}
+.btn-rose{background:#9c3a44;color:#fff}
 @media(min-width:640px){.offer .btn{width:auto}}
 
 /* ---------- steps ---------- */
@@ -235,6 +250,28 @@ footer .brand{justify-content:center;font-size:1rem;margin-bottom:.4rem;color:va
     <div class="orn" aria-hidden="true">✦</div>
   </div>
   <div class="wrap">
+    <article class="offer offer-kids rv">
+      <div class="offer-badge" aria-label="Toplam 65 adet ürün"><b>65</b><span>adet ürün</span></div>
+      <div class="offer-label">Kampanya · Okul beslenmesi</div>
+      <h3>2 Haftalık Beslenme Paketi</h3>
+      <p>Hem pratik hem lezzetli! Çocuklarınız için özenle hazırladığımız ev yapımı beslenme paketi. İster buzluğa at, ister haftalık tüket.</p>
+      <div class="offer-price"><del aria-label="Ürünler ayrı ayrı alındığında 2300 TL">2.300 ₺</del><strong>2.000 ₺</strong><span class="offer-save">300 ₺ avantaj</span></div>
+      <small class="offer-note">Üstü çizili fiyat: ürünler ayrı ayrı alındığında.</small>
+      <h4>Paket içeriği</h4>
+      <ul>
+        <li>15 adet Çıtır Börek <em>(kalem şeklinde)</em></li>
+        <li>15 adet Poğaça</li>
+        <li>15 adet Muffin</li>
+        <li>20 adet Kurabiye <em>— Elmalı veya Kakaolu</em></li>
+      </ul>
+      <div class="offer-feats">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2v20M4.9 6l14.2 12M4.9 18 19.1 6M9 3.5l3 2 3-2M9 20.5l3-2 3 2"/></svg>Dondurucuda saklanabilir</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>2 hafta boyunca tüketilir</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14zM5 19l7-7"/></svg>Katkısız, ev yapımı</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 14.5a4.5 4.5 0 0 0 7 0M9.5 10h0M14.5 10h0"/></svg>Miniklere özenle</span>
+      </div>
+      <a class="btn btn-rose" href="https://wa.me/905442374072?text=Merhaba%2C%202.000%20TL%20olan%202%20haftal%C4%B1k%20beslenme%20paketini%20sipari%C5%9F%20etmek%20istiyorum.%20Kurabiye%20tercihim%3A%20Elmal%C4%B1%20/%20Kakaolu" target="_blank" rel="noopener">Paketi WhatsApp'tan sipariş et</a>
+    </article>
     <article class="offer offer-feast rv">
       <div class="offer-label">10 kişilik · Kampanyalı menü</div>
       <h3>Kalabalık sofralar, ev yapımı lezzetler</h3>
