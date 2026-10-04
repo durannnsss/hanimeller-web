@@ -137,7 +137,6 @@ h1 em{font-style:italic;color:var(--gold)}
 .offer .btn{width:100%;margin-top:.7rem;letter-spacing:.06em;text-align:center;min-height:48px}
 .offer-feast{background:linear-gradient(135deg,#fbf5e8,#f2e4cc);border-color:#c9a77b}
 .offer-feast h3,.offer-feast .offer-price strong{color:#7b2933}
-.offer-manti{border-style:dashed}
 @media(min-width:640px){.offer .btn{width:auto}}
 
 /* ---------- steps ---------- */
@@ -256,13 +255,6 @@ footer .brand{justify-content:center;font-size:1rem;margin-bottom:.4rem;color:va
       </ul>
       <a class="btn btn-gold" href="https://wa.me/905442374072?text=Merhaba%2C%203.000%20TL%20olan%2010%20ki%C5%9Filik%20kampanyal%C4%B1%20men%C3%BC%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Menü için WhatsApp'tan yazın</a>
     </article>
-    <article class="offer offer-manti rv">
-      <div class="offer-label">Kayseri usulü · El yapımı · Dondurulmuş</div>
-      <h3>Kayserili annemin elinden mantı</h3>
-      <p>El emeğiyle özenle hazırlanan, dondurulmuş Kayseri mantısı.</p>
-      <div class="offer-price"><strong>750 ₺</strong><span>/ kg</span></div>
-      <a class="btn btn-gold" href="https://wa.me/905442374072?text=Merhaba%2C%20kilosu%20750%20TL%20olan%20dondurulmu%C5%9F%20Kayseri%20mant%C4%B1s%C4%B1%20i%C3%A7in%20sipari%C5%9F%20bilgisi%20almak%20istiyorum." target="_blank" rel="noopener">Mantı için WhatsApp'tan yazın</a>
-    </article>
   </div>
 </section>
 
@@ -347,6 +339,7 @@ footer .brand{justify-content:center;font-size:1rem;margin-bottom:.4rem;color:va
 const MENU = [
   { id:"tuzlu", name:"Tuzlular", sub:"Mezeler & Salatalar", items:[
     { n:"Yaprak Sarma", u:"kg", p:700, d:"İncecik sarılmış, taptaze el yapımı" },
+    { n:"Lahana Sarması", u:"kg", p:750, d:"Zeytinyağlı · Etli +250 ₺" },
     { n:"Kuru Dolma", u:"", p:800 },
     { n:"Girit Ezmesi", u:"", p:750 },
     { n:"Mercimek Köftesi / Topları", u:"", p:450 },
@@ -370,10 +363,14 @@ const MENU = [
     { n:"Kaşar & Salam & Zeytin Ezmeli Kanepe", u:"adet", p:35 },
   ]},
   { id:"hamur", name:"Börek & Hamur İşi", sub:"Fırından", items:[
-    { n:"Kayseri Mantısı", u:"kg", p:750, d:"El yapımı · Dondurulmuş" },
     { n:"Çıtır Börek", u:"kg", p:850, d:"Ispanaklı · Peynirli · Patatesli — Kıymalı +150 ₺" },
     { n:"Muska Böreği", u:"adet", p:70, d:"Minimum 10 adet" },
     { n:"Poğaça Çeşitleri", u:"adet", p:35, d:"Sakallı · Peynirli · Sade · Haşhaşlı · Zeytinli" },
+  ]},
+  { id:"dondurulmus", name:"Dondurulmuş", sub:"Evde pişir, taze sun", items:[
+    { n:"Börek Çeşitleri", u:"kg", p:750, d:"Süsle, fırına at · 1 kg ≈ 30 adet" },
+    { n:"Yaprak Sarma", u:"kg", p:650, d:"Pişirilmemiş" },
+    { n:"İçli Köfte", u:"adet", p:70 },
   ]},
   { id:"kek", name:"Kekler", sub:"Ev usulü", items:[
     { n:"Islak Kek", u:"", p:550 },
@@ -391,6 +388,7 @@ const MENU = [
     { n:"Şekerpare", u:"", p:600 },
     { n:"Triliçe", u:"", p:1000 },
     { n:"Profiterol", u:"", p:800 },
+    { n:"Cheesecake (Bütün)", u:"", p:1500 },
     { n:"Mini Cheesecake", u:"adet", p:70, d:"Frambuazlı veya limonlu" },
     { n:"Porsiyonluk Tart", u:"adet", p:150 },
     { n:"Tartolet", u:"adet", p:30 },
@@ -407,6 +405,11 @@ const MENU = [
     { n:"Un Kurabiyesi", u:"", p:600 },
     { n:"Mantar Kurabiye", u:"", p:600 },
     { n:"Starbucks Kurabiye", u:"", p:900 },
+    { n:"Anne Kurabiyesi", u:"kg", p:800, d:"Portakallı, cevizli" },
+    { n:"Brownie Kurabiye", u:"kg", p:750 },
+    { n:"Hindistan Cevizli Kakaolu Kurabiye", u:"kg", p:750 },
+    { n:"Çatlak Kurabiye", u:"kg", p:750 },
+    { n:"Sirkeli Tuzlu Kurabiye", u:"kg", p:700, d:"Uzun raf ömürlü" },
   ]},
   { id:"sekersiz", name:"Şeker İlavesiz", sub:"Daha hafif seçenekler", items:[
     { n:"Hurma Topu", u:"adet", p:45, d:"Şeker ilavesiz çikolata kaplamalı" },
